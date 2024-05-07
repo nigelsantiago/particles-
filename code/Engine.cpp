@@ -2,6 +2,8 @@
 using namespace sf;
 using namespace std;
 
+int num = 50;
+
 Engine::Engine()
 {
   unsigned int desktop_w = VideoMode::getDesktopMode().width; 
@@ -29,7 +31,8 @@ void Engine::input()
             else if (event.type == Event::MouseButtonPressed) 
             {
               if (event.mouseButton.button == sf::Mouse::Left)
-	            {      
+	            {    
+					num = rand()%40;  
                 for(int i = 0; i <= 5; i++) // 6 particles
                 {
 		              int numPoints = rand()%(50 - 42 + 1) + 42; //check rand formula
@@ -65,8 +68,6 @@ void Engine::draw()
 	m_Window.clear();
 	
 	//static int bonusCounter = 0;
-	int num = rand()%108;
-	
 	if (num < 1)
 	{
 		bonusFeature();  // perform this randomly
@@ -154,7 +155,7 @@ void Engine::bonusFeature()
 		s.loadFromFile("sound/death.wav");
 		Sound scream;
 		scream.setBuffer(s);
-
+		//scream.setVolume(35.f);
 		scream.play();
 		m_Window.draw(spriteChar);
 	}
@@ -173,7 +174,7 @@ void Engine::bonusFeature()
 		s.loadFromFile("sound/death.wav");
 		Sound scream;
 		scream.setBuffer(s);
-
+		//scream.setVolume(30.f);
 		scream.play();
 		
 		m_Window.draw(spriteChar);
