@@ -64,7 +64,7 @@ void Engine::draw()
 {
 	m_Window.clear();
 
-	int num = rand()%91;
+	int num = rand()%81;
 	if (num < 1)
 	{
 		bonusFeature();  // perform this randomly
@@ -116,33 +116,36 @@ void Engine::bonusFeature()
 		Sprite spriteChar;
 		spriteChar.setTexture(textureChar);
 		spriteChar.setPosition(xPos, yPos);
+		spriteChar.scale(6, 6);
 		
 		m_Window.draw(spriteChar);
 	}
 	else if (num > 200)
 	{
-		//pikachu
+		//pikachu or slakoth
 		//int vX = -150;
 
 		Texture textureChar;
-		textureChar.loadFromFile("graphics/pikachu.png"); // double check
+		textureChar.loadFromFile("graphics/slakoth.png"); // double check
 		Sprite spriteChar;
 		spriteChar.setTexture(textureChar);
 		spriteChar.setPosition(xPos, yPos);
-
+		spriteChar.scale(6, 6);
+		
 		m_Window.draw(spriteChar);
 	}
 	else if (num > 100)
 	{
-		//mew
+		//mew or linda
 		//int vX = 200;
 		//int vY = 250;
 
 		Texture textureChar;
-		textureChar.loadFromFile("graphics/mew1.jpeg"); // double check
+		textureChar.loadFromFile("graphics/linda.jpeg"); // double check
 		Sprite spriteChar;
 		spriteChar.setTexture(textureChar);
-		spriteChar.setPosition(xPos, yPos);
+		spriteChar.setPosition(960, 540);
+		spriteChar.scale(8, 8);
 
 		m_Window.draw(spriteChar);
 	}
@@ -155,7 +158,7 @@ void Engine::bonusFeature()
 		Sprite spriteChar;
 		spriteChar.setTexture(textureChar);
 		spriteChar.setPosition(960, 540);
-		spriteChar.scale(7, 7);
+		spriteChar.scale(8, 8);
 
 		m_Window.draw(spriteChar);
 	}
