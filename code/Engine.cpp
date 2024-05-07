@@ -63,13 +63,16 @@ void Engine::update(float dtAsSeconds)
 void Engine::draw()
 {
 	m_Window.clear();
-
-	int num = rand()%81;
-	if (num < 1)
+	
+	static int bonusCounter = 0;
+	//int num = rand()%81;
+	
+	if (bonusCounter == 10)
 	{
 		bonusFeature();  // perform this randomly
+		bonusCounter = 0;
 	}
-
+	bonusCounter++;
 	for (size_t i = 0; i < m_Particles.size(); i++)
 	{
 		m_Window.draw(m_Particles.at(i));
