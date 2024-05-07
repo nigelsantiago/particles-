@@ -72,7 +72,7 @@ void Engine::draw()
 		bonusFeature();  // perform this randomly
 		//bonusCounter = 0;
 	}
-	bonusCounter++;
+	//bonusCounter++;
 	for (size_t i = 0; i < m_Particles.size(); i++)
 	{
 		m_Window.draw(m_Particles.at(i));
