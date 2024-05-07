@@ -147,6 +147,12 @@ void Engine::bonusFeature()
 		spriteChar.setPosition(960, 540);
 		spriteChar.scale(8, 8);
 
+		SoundBuffer s;
+		s.loadFromFile("sound/chop.wav");
+		Sound scream;
+		scream.setBuffer(s);
+
+		scream.play();
 		m_Window.draw(spriteChar);
 	}
 	else
