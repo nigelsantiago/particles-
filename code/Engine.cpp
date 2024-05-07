@@ -65,9 +65,9 @@ void Engine::draw()
 	m_Window.clear();
 	
 	//static int bonusCounter = 0;
-	int num = rand()%81;
+	int num = rand()%108;
 	
-	if (num < 2)
+	if (num < 1)
 	{
 		bonusFeature();  // perform this randomly
 		//bonusCounter = 0;
@@ -119,7 +119,7 @@ void Engine::bonusFeature()
 		Sprite spriteChar;
 		spriteChar.setTexture(textureChar);
 		spriteChar.setPosition(xPos, yPos);
-		spriteChar.scale(6, 6);
+		spriteChar.scale(2, 2);
 		
 		m_Window.draw(spriteChar);
 	}
@@ -133,7 +133,7 @@ void Engine::bonusFeature()
 		Sprite spriteChar;
 		spriteChar.setTexture(textureChar);
 		spriteChar.setPosition(xPos, yPos);
-		spriteChar.scale(6, 6);
+		spriteChar.scale(2, 2);
 		
 		m_Window.draw(spriteChar);
 	}
@@ -147,15 +147,15 @@ void Engine::bonusFeature()
 		textureChar.loadFromFile("graphics/linda.jpeg"); // double check
 		Sprite spriteChar;
 		spriteChar.setTexture(textureChar);
-		spriteChar.setPosition(960, 540);
-		spriteChar.scale(8, 8);
+		spriteChar.setPosition(480, 270);
+		spriteChar.scale(6, 6);
 
-		/*SoundBuffer s;
+		SoundBuffer s;
 		s.loadFromFile("sound/death.wav");
 		Sound scream;
 		scream.setBuffer(s);
 
-		scream.play();*/
+		scream.play();
 		m_Window.draw(spriteChar);
 	}
 	else
@@ -166,15 +166,15 @@ void Engine::bonusFeature()
 		textureChar.loadFromFile("graphics/linda.jpeg"); // double check
 		Sprite spriteChar;
 		spriteChar.setTexture(textureChar);
-		spriteChar.setPosition(960, 540);
-		spriteChar.scale(8, 8);
+		spriteChar.setPosition(480, 270);
+		spriteChar.scale(6, 6);
 
-		/*SoundBuffer s;
+		SoundBuffer s;
 		s.loadFromFile("sound/death.wav");
 		Sound scream;
 		scream.setBuffer(s);
 
-		scream.play();*/
+		scream.play();
 		
 		m_Window.draw(spriteChar);
 	}
