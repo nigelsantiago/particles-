@@ -64,7 +64,7 @@ void Engine::draw()
 {
 	m_Window.clear();
 
-	int num = rand()%151;
+	int num = rand()%91;
 	if (num < 1)
 	{
 		bonusFeature();  // perform this randomly
