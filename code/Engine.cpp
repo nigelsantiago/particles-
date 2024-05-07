@@ -104,7 +104,7 @@ void Engine::bonusFeature()
 
 	if (num > 300)
 	{
-		int vX = 50;
+		//int vX = 50;
 		//slakoth
 		Texture textureChar;
 		textureChar.loadFromFile("graphics/slakoth.png"); // double check
@@ -117,7 +117,7 @@ void Engine::bonusFeature()
 	else if (num > 200)
 	{
 		//pikachu
-		int vX = -150;
+		//int vX = -150;
 
 		Texture textureChar;
 		textureChar.loadFromFile("graphics/pikachu.png"); // double check
@@ -130,8 +130,8 @@ void Engine::bonusFeature()
 	else if (num > 100)
 	{
 		//mew
-		int vX = 200;
-		int vY = 250;
+		//int vX = 200;
+		//int vY = 250;
 
 		Texture textureChar;
 		textureChar.loadFromFile("graphics/mew1.jpeg"); // double check
