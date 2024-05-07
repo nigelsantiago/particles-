@@ -64,7 +64,7 @@ void Engine::draw()
 {
 	m_Window.clear();
 
-	int num = rand()%301;
+	int num = rand()%151;
 	if (num < 1)
 	{
 		bonusFeature();  // perform this randomly
@@ -105,7 +105,7 @@ void Engine::bonusFeature()
 	int num = rand() % 401;
 	int xPos = rand() % (1281) + 320;
 	int yPos = rand() % (801) + 200;
-	cout << num << endl; //tester
+	//cout << num << endl; //tester
 
 	if (num > 300)
 	{
