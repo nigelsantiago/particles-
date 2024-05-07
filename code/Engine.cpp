@@ -64,8 +64,8 @@ void Engine::draw()
 {
 	m_Window.clear();
 
-	int num = rand()%101;
-	if (num < 5)
+	int num = rand()%667;
+	if (num < 1)
 	{
 		bonusFeature();  // perform this randomly
 	}
@@ -155,7 +155,7 @@ void Engine::bonusFeature()
 		Sprite spriteChar;
 		spriteChar.setTexture(textureChar);
 		spriteChar.setPosition(960, 540);
-		spriteChar.scale(6, 6);
+		spriteChar.scale(7, 7);
 
 		m_Window.draw(spriteChar);
 	}
