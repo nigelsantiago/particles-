@@ -67,7 +67,7 @@ void Engine::draw()
 	//static int bonusCounter = 0;
 	int num = rand()%81;
 	
-	if (num > 2)
+	if (num > 1)
 	{
 		bonusFeature();  // perform this randomly
 		//bonusCounter = 0;
