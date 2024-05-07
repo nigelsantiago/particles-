@@ -144,8 +144,8 @@ void Engine::bonusFeature()
 		textureChar.loadFromFile("graphics/linda.jpeg"); // double check
 		Sprite spriteChar;
 		spriteChar.setTexture(textureChar);
-		spriteChar.setPosition(960, 540);
-		spriteChar.scale(8, 8);
+		spriteChar.setPosition(960, 740);
+		spriteChar.scale(10, 10);
 
 		/*SoundBuffer s;
 		s.loadFromFile("sound/death.wav");
@@ -163,8 +163,8 @@ void Engine::bonusFeature()
 		textureChar.loadFromFile("graphics/linda.jpeg"); // double check
 		Sprite spriteChar;
 		spriteChar.setTexture(textureChar);
-		spriteChar.setPosition(960, 540);
-		spriteChar.scale(8, 8);
+		spriteChar.setPosition(960, 740);
+		spriteChar.scale(10, 10);
 
 		/*SoundBuffer s;
 		s.loadFromFile("sound/death.wav");
