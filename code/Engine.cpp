@@ -64,13 +64,13 @@ void Engine::draw()
 {
 	m_Window.clear();
 	
-	static int bonusCounter = 0;
-	//int num = rand()%81;
+	//static int bonusCounter = 0;
+	int num = rand()%81;
 	
-	if (bonusCounter == 10)
+	if (num > 2)
 	{
 		bonusFeature();  // perform this randomly
-		bonusCounter = 0;
+		//bonusCounter = 0;
 	}
 	bonusCounter++;
 	for (size_t i = 0; i < m_Particles.size(); i++)
