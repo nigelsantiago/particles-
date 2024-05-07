@@ -34,8 +34,10 @@ void Engine::input()
                 {
 		              int numPoints = rand()%(50 - 42 + 1) + 42; //check rand formula
         	        Particle p(m_Window, numPoints, {event.mouseButton.x, event.mouseButton.y});
-			            m_Particles.push_back(p);  // try storing the particle in tbe arrag?
-                }	
+			            m_Particles.push_back(p);  // try storing the particle in tbe array?
+                }
+				// perform this randomly
+				bonusFeature();
               }
             }
         }
@@ -91,4 +93,64 @@ void Engine::run()
     draw();
   }
       
+}
+
+void Engine::bonusFeature()
+{
+	int num = rand() % 401;
+	int xPos = rand() % (1281) + 320;
+	int yPos = rand() % (801) + 200;
+	cout << num << endl; //tester
+
+	if (num > 300)
+	{
+		int vX = 50;
+		//slakoth
+		Texture textureChar;
+		textureChar.loadFromFile("graphics/slakoth.png"); // double check
+		Sprite spriteChar;
+		spriteChar.setTexture(textureChar);
+		spriteChar.setPosition(xPos, yPos);
+		
+		m_Window.draw(spriteChar);
+	}
+	else if (num > 200)
+	{
+		//pikachu
+		int vX = -150;
+
+		Texture textureChar;
+		textureChar.loadFromFile("graphics/pikachu.png"); // double check
+		Sprite spriteChar;
+		spriteChar.setTexture(textureChar);
+		spriteChar.setPosition(xPos, yPos);
+
+		m_Window.draw(spriteChar);
+	}
+	else if (num > 100)
+	{
+		//mew
+		int vX = 200;
+		int vY = 250;
+
+		Texture textureChar;
+		textureChar.loadFromFile("graphics/mew1.jpeg"); // double check
+		Sprite spriteChar;
+		spriteChar.setTexture(textureChar);
+		spriteChar.setPosition(xPos, yPos);
+
+		m_Window.draw(spriteChar);
+	}
+	else
+	{
+		//linda
+
+		Texture textureChar;
+		textureChar.loadFromFile("graphics/linda.jpeg"); // double check
+		Sprite spriteChar;
+		spriteChar.setTexture(textureChar);
+		spriteChar.setPosition(960, 540);
+
+		m_Window.draw(spriteChar);
+	}
 }
