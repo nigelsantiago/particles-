@@ -63,7 +63,13 @@ void Engine::update(float dtAsSeconds)
 void Engine::draw()
 {
 	m_Window.clear();
-	bonusFeature();  // perform this randomly
+
+	int num = rand()%101;
+	if (num < 5)
+	{
+		bonusFeature();  // perform this randomly
+	}
+
 	for (size_t i = 0; i < m_Particles.size(); i++)
 	{
 		m_Window.draw(m_Particles.at(i));
@@ -149,6 +155,7 @@ void Engine::bonusFeature()
 		Sprite spriteChar;
 		spriteChar.setTexture(textureChar);
 		spriteChar.setPosition(960, 540);
+		spriteChar.scale(6, 6);
 
 		m_Window.draw(spriteChar);
 	}
