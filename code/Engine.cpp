@@ -36,8 +36,6 @@ void Engine::input()
         	        Particle p(m_Window, numPoints, {event.mouseButton.x, event.mouseButton.y});
 			            m_Particles.push_back(p);  // try storing the particle in tbe array?
                 }
-				// perform this randomly
-				bonusFeature();
               }
             }
         }
@@ -65,6 +63,7 @@ void Engine::update(float dtAsSeconds)
 void Engine::draw()
 {
 	m_Window.clear();
+	bonusFeature();  // perform this randomly
 	for (size_t i = 0; i < m_Particles.size(); i++)
 	{
 		m_Window.draw(m_Particles.at(i));
