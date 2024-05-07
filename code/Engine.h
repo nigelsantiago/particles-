@@ -18,6 +18,7 @@ private:
 	void input();
 	void update(float dtAsSeconds);
 	void draw();
+	void bonusFeature();
 
 public:
 	// The Engine constructor
