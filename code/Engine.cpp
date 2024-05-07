@@ -64,7 +64,7 @@ void Engine::draw()
 {
 	m_Window.clear();
 
-	int num = rand()%81;
+	int num = rand()%86;
 	if (num < 1)
 	{
 		bonusFeature();  // perform this randomly
@@ -147,12 +147,12 @@ void Engine::bonusFeature()
 		spriteChar.setPosition(960, 540);
 		spriteChar.scale(8, 8);
 
-		SoundBuffer s;
+		/*SoundBuffer s;
 		s.loadFromFile("sound/death.wav");
 		Sound scream;
 		scream.setBuffer(s);
 
-		scream.play();
+		scream.play();*/
 		m_Window.draw(spriteChar);
 	}
 	else
@@ -166,14 +166,13 @@ void Engine::bonusFeature()
 		spriteChar.setPosition(960, 540);
 		spriteChar.scale(8, 8);
 
-		SoundBuffer s;
+		/*SoundBuffer s;
 		s.loadFromFile("sound/death.wav");
 		Sound scream;
 		scream.setBuffer(s);
 
-		scream.play();
+		scream.play();*/
 		
-		m_Window.draw(spriteChar);
 		m_Window.draw(spriteChar);
 	}
 }
